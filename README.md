@@ -1,10 +1,4 @@
-# my-plugin
-
-## Installation
-
-- [Download](../../releases/latest/download/my-plugin.sketchplugin.zip) the latest release of the plugin
-- Un-zip
-- Double-click on my-plugin.sketchplugin
+# my-plugin-react3.5
 
 ## Development Guide
 
@@ -53,7 +47,7 @@ To customize webpack create `webpack.skpm.config.js` file which exports function
  * @param {object} entry - entry property from webpack config
  * @param {boolean} entry.isPluginCommand - whether the config is for a plugin command or a resource
  **/
-module.exports = function(config, entry) {
+module.exports = function (config, entry) {
   /** you can change config here **/
 };
 ```
@@ -63,10 +57,10 @@ To use the polyfills or the mocks for certain Node.js globals and modules use th
 Visit [the official documention](https://webpack.js.org/configuration/node/) for available options.
 
 ```js
-if(entry.isPluginCommand ){
+if (entry.isPluginCommand) {
   config.node = {
-    setImmediate: false
-  }
+    setImmediate: false,
+  };
 } else {
   config.node = false;
 }
