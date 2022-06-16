@@ -5,7 +5,6 @@ const App = () => {
   const [sketchData, setSketchData, refreshSketchData] = useSketchData();
 
   useEffect(() => {
-    debugger;
     console.log("refresh data!");
     refreshSketchData();
   }, []);
